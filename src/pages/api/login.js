@@ -4,8 +4,8 @@ export default function handler(req, res) {
   
     // Mocked user data (replace with your authentication logic)
     const user = {
-      email: 'user@example.com',
-      password: 'password123',
+      email: 'user@gmail.com',
+      password: '123',
     };
   
     if (email === user.email && password === user.password) {
