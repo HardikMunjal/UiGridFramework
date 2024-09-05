@@ -3,7 +3,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
-import EditableDialog from '..EditableDialog/app/Component/EditableDialog'
+import EditableDialog from '../app/component/EditableDialog'
 
 // Custom styling for cells and headers
 const StyledDataGrid = styled(DataGrid)(({ theme }) => ({

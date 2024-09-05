@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../app/Navbar/navbar'
 import { Box } from '@mui/material'
-import DataTable from '..table/app/Component/table'
+import DataTable from '../app/component/table'
 
 export default function dashboard() {
   return (
