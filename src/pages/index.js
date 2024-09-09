@@ -25,7 +25,7 @@ export default function Login() {
       const response = await axios.post('/api/login', { email, password });
 
       if (response.status === 200) {
-        router.push('/dashboard'); // Redirect to the dashboard after successful login
+        router.push('/workspace-management'); // Redirect to the dashboard after successful login
       } else {
         setError('Invalid credentials');
       }

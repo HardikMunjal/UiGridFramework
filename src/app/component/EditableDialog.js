@@ -7,7 +7,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 
-const EditableDialog = ({ open, onClose, data, onSave, onChange }) => {
+const EditableDialog = ({ open, onClose, data, datatypeProps, onSave, onChange }) => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     onChange(name, value);
@@ -16,6 +16,8 @@ const EditableDialog = ({ open, onClose, data, onSave, onChange }) => {
   return (
     <Dialog open={open} onClose={onClose}>
       <DialogTitle>Edit Row</DialogTitle>
+      if(datatypeProps === 'workspaceMgmt')
+      {
       <DialogContent>
         <TextField
           label="First Name"
@@ -59,6 +61,53 @@ const EditableDialog = ({ open, onClose, data, onSave, onChange }) => {
           sx={{ marginBottom: 2 }}
         />
       </DialogContent>
+      }
+      else if(datatypeProps === 'objectMgmt')
+      {
+      <DialogContent>
+        <TextField
+          label="First Nam"
+          name="firstName"
+          value={data.firstName || ''}
+          onChange={handleInputChange}
+          fullWidth
+          sx={{ marginBottom: 2 }}
+        />
+        <TextField
+          label="Last"
+          name="lastName"
+          value={data.lastName || ''}
+          onChange={handleInputChange}
+          fullWidth
+          sx={{ marginBottom: 2 }}
+        />
+        <TextField
+          label="Age"
+          name="age"
+          type="number"
+          value={data.age || ''}
+          onChange={handleInputChange}
+          fullWidth
+          sx={{ marginBottom: 2 }}
+        />
+        <TextField
+          label="Country"
+          name="country"
+          value={data.country || ''}
+          onChange={handleInputChange}
+          fullWidth
+          sx={{ marginBottom: 2 }}
+        />
+        <TextField
+          label="Job Title"
+          name="jobTitle"
+          value={data.jobTitle || ''}
+          onChange={handleInputChange}
+          fullWidth
+          sx={{ marginBottom: 2 }}
+        />
+      </DialogContent>
+      }
       <DialogActions>
         <Button onClick={onClose} color="primary">
           Cancel
